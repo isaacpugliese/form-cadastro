@@ -1,0 +1,76 @@
+h1
+{
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#nome, #email, #telefone, #endereco, #numero, #bairro, #cidade, #estado, #cep, #estadoCivil
+{
+    width: 100%;
+    border-radius: 10px;
+    font-size: x-large;
+}
+label
+{
+    font-size: x-large;
+    margin-top: 1%;
+}
+
+.termosUso {
+    display: block;
+    position: relative;
+    padding-left: 4%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+  }
+
+  .termosUso input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    left: 0;
+    height: 80%;
+    width: 2.5%;
+    background-color: lightgrey;
+    box-shadow: 0 3px 6px black;
+    border-radius: 10px;
+    margin-top: 0.5%;
+  }
+
+  .termosUso:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .termosUso input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .termosUso input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .termosUso .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
